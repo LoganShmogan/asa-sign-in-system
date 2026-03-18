@@ -1,9 +1,8 @@
 # SIGN-IN/OUT SYSTEM
 
 ## Project Outline:
-(figma design https://www.figma.com/design/ibjI6hXJar9CuiHN5D4MLM/Industry-Project-Prototype?node-id=0-1&t=VmJs90Ldk9BvlUv5-1)
-## Aim:
 
+## Aim:
 Deliver a sign- in/out system with a notice board as the first point of contact for the After School Adventures childcare.
 
 ## Outline:
@@ -86,3 +85,10 @@ b) Continue to test and optimize system
 - 1x Raspberry pi computer. SUPPLIED
 - 1x Raspberry pi touchscreen. SUPPLIED
 - 1x Tablet. SUPPLIED
+
+## Design Work
+
+(figma design https://www.figma.com/design/ibjI6hXJar9CuiHN5D4MLM/Industry-Project-Prototype?node-id=0-1&t=VmJs90Ldk9BvlUv5-1)
+
+### 3d Print
+<img width="715" height="455" alt="Screenshot_2026-03-19_10-45-35" src="https://github.com/user-attachments/assets/3e36433b-10e8-4ef1-95e1-cbf2accd1055" />
