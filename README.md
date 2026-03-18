@@ -82,9 +82,9 @@ b) Continue to test and optimize system
 
 ## Equipment
 
-- 1x Raspberry pi computer. SUPPLIED
-- 1x Raspberry pi touchscreen. SUPPLIED
-- 1x Tablet. SUPPLIED
+- 1x Raspberry pi 3b+ computer. SUPPLIED
+- 1x Raspberry pi 2 touchscreen. SUPPLIED
+- 1x Lenovo Tablet. SUPPLIED
 
 ## Design Work
 
