@@ -1,7 +1,7 @@
 # SIGN-IN/OUT SYSTEM
 
 ## Project Outline:
-
+(figma design https://www.figma.com/design/ibjI6hXJar9CuiHN5D4MLM/Industry-Project-Prototype?node-id=0-1&t=VmJs90Ldk9BvlUv5-1)
 ## Aim:
 
 Deliver a sign- in/out system with a notice board as the first point of contact for the After School Adventures childcare.
