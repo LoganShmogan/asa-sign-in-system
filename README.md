@@ -84,11 +84,13 @@ b) Continue to test and optimize system
 
 - 1x Raspberry pi 3b+ computer. SUPPLIED
 - 1x Raspberry pi 2 touchscreen. SUPPLIED
-- 1x Lenovo Tablet. SUPPLIED
 
-## Design Work
+## File structure
+All app files will be displayed in root folder, then seperated into their corisponding uses. IE Componenets, pics, views, etc.
+All other files will be in seperated folders including design, 3d, raw files, app, docs, etc.
 
-(figma design https://www.figma.com/design/ibjI6hXJar9CuiHN5D4MLM/Industry-Project-Prototype?node-id=0-1&t=VmJs90Ldk9BvlUv5-1)
+## Workflow
+Please view the project section for a less detailed view otherwise issues is constantly updated with what im working on. 
+The ToDo list: (bulk across the board) inlcudes all my todos etc etc. 
 
-### 3d Print
-<img width="715" height="455" alt="Screenshot_2026-03-19_10-45-35" src="https://github.com/user-attachments/assets/3e36433b-10e8-4ef1-95e1-cbf2accd1055" />
+
