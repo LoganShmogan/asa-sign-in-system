@@ -30,5 +30,3 @@ lblNotices.pack()
 
 # Runs inputs from user
 root.mainloop()
-
-
