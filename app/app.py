@@ -13,16 +13,13 @@ root.geometry("300x300+50+50")
 
 # Widgets
 # Images
-imgAsaLogo = tk.PhotoImage(file="Coin.png")
-lblimgAsaLogo = tk.Label(root, image=imgAsaLogo)
 
 # Labels
 lblEnterName = tk.Label(root, text="Enter Name")
-lblNotices= tk.Label(root, text="Notices")
+lblNotices = tk.Label(root, text="Notices")
 
 # Asigned Widgets
 # Images
-lblimgAsaLogo.pack()
 
 # Labels
 lblEnterName.pack()
