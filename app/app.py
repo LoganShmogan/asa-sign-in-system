@@ -7,7 +7,7 @@ root = tk.Tk()
 # Window properties
 root.title("ASA Sign-in System")
 root.configure(background="white")
-root.minsize(720, 1280)
+root.minsize(1280, 720)
 root.geometry("300x300+50+50")
 
 # Widgets
