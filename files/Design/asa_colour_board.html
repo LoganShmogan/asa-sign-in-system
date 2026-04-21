@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASA Sign-in System — Colour Board</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5f4f0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #1a1a1a;
+    padding: 48px;
+    min-height: 100vh;
+  }
+
+  header {
+    margin-bottom: 48px;
+    border-left: 4px solid #372976;
+    padding-left: 20px;
+  }
+
+  header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #372976;
+    letter-spacing: -0.5px;
+  }
+
+  header p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 4px;
+  }
+
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dedad4;
+  }
+
+  .row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .swatch {
+    border-radius: 10px;
+    padding: 18px 20px;
+    min-width: 180px;
+    flex: 1;
+  }
+
+  .swatch .label {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .swatch .hex {
+    font-size: 11px;
+    margin-top: 8px;
+    font-family: 'Courier New', monospace;
+    opacity: 0.7;
+  }
+
+  .swatch .usage {
+    font-size: 11px;
+    margin-top: 3px;
+    opacity: 0.6;
+  }
+
+  /* Notice card preview */
+  .notice-card {
+    background: #ffffff;
+    border: 0.5px solid #d5d2ca;
+    border-left: 4px solid #372976;
+    border-radius: 8px;
+    padding: 16px 18px;
+    flex: 1;
+    min-width: 260px;
+  }
+  .notice-card .nc-title { color: #372976; font-size: 13px; font-weight: 600; }
+  .notice-card .nc-body  { color: #1a1a1a; font-size: 12px; margin-top: 5px; line-height: 1.5; }
+  .notice-card .nc-date  { color: #888; font-size: 11px; text-align: right; margin-top: 10px; }
+
+  /* Popup preview */
+  .popup {
+    background: #fff;
+    border: 0.5px solid #e0ddd5;
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 200px;
+  }
+  .popup .popup-bar { padding: 8px 16px; }
+  .popup .popup-bar span { color: #fff; font-size: 13px; font-weight: 600; }
+  .popup .popup-body { padding: 14px 16px; }
+  .popup .popup-body .label { color: #1a1a1a; font-size: 13px; font-weight: 600; }
+  .popup .popup-body .hex { color: #888; font-size: 11px; margin-top: 4px; font-family: 'Courier New', monospace; }
+
+  /* Entry field preview */
+  .entry-preview {
+    background: #fff;
+    border: 2.5px solid #372976;
+    border-radius: 8px;
+    padding: 14px 18px;
+    flex: 1;
+    min-width: 200px;
+    color: #1a1a1a;
+    font-size: 13px;
+  }
+  .entry-preview .placeholder { color: #999; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid #dedad4;
+    font-size: 12px;
+    color: #aaa;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>ASA Sign-in System</h1>
+  <p>Colour Board — UI Design Reference</p>
+</header>
+
+<!-- Backgrounds & Surfaces -->
+<div class="section">
+  <div class="section-title">Backgrounds &amp; Surfaces</div>
+  <div class="row">
+    <div class="swatch" style="background:#f5f4f0; border: 1px solid #dedad4;">
+      <div class="label" style="color:#1a1a1a;">Page background</div>
+      <div class="hex" style="color:#666;">#f5f4f0</div>
+      <div class="usage" style="color:#666;">Off-white — main app background</div>
+    </div>
+    <div class="swatch" style="background:#ffffff; border: 1px solid #dedad4;">
+      <div class="label" style="color:#1a1a1a;">Cards &amp; entry fields</div>
+      <div class="hex" style="color:#666;">#ffffff</div>
+      <div class="usage" style="color:#666;">White — surfaces that need to pop</div>
+    </div>
+    <div class="swatch" style="background:#ebe9e4; border: 1px solid #dedad4;">
+      <div class="label" style="color:#1a1a1a;">Notices panel</div>
+      <div class="hex" style="color:#666;">#ebe9e4</div>
+      <div class="usage" style="color:#666;">Warm grey — right-hand info panel</div>
+    </div>
+    <div class="swatch" style="background:#dedad4; border: 1px solid #ccc;">
+      <div class="label" style="color:#1a1a1a;">Dividers &amp; borders</div>
+      <div class="hex" style="color:#666;">#dedad4</div>
+      <div class="usage" style="color:#666;">Subtle separators between sections</div>
+    </div>
+  </div>
+</div>
+
+<!-- Primary Colour -->
+<div class="section">
+  <div class="section-title">Primary — Purple</div>
+  <div class="row">
+    <div class="swatch" style="background:#372976;">
+      <div class="label" style="color:#fff;">Primary button</div>
+      <div class="hex" style="color:#b0a8d8;">#372976</div>
+      <div class="usage" style="color:#b0a8d8;">Default state</div>
+    </div>
+    <div class="swatch" style="background:#4a3a8a;">
+      <div class="label" style="color:#fff;">Primary button hover</div>
+      <div class="hex" style="color:#c5bfe8;">#4a3a8a</div>
+      <div class="usage" style="color:#c5bfe8;">Hover / focus state</div>
+    </div>
+    <div class="swatch" style="background:#2a1f5e;">
+      <div class="label" style="color:#fff;">Primary button active</div>
+      <div class="hex" style="color:#b0a8d8;">#2a1f5e</div>
+      <div class="usage" style="color:#b0a8d8;">Pressed state</div>
+    </div>
+  </div>
+  <div class="row" style="margin-top:12px;">
+    <div class="swatch" style="background:#f5f4f0; border: 1px solid #dedad4;">
+      <div class="label" style="color:#372976;">Section headings</div>
+      <div class="hex" style="color:#888;">#372976</div>
+      <div class="usage" style="color:#888;">Purple text on off-white background</div>
+    </div>
+    <div class="swatch" style="background:#f5f4f0; border-left: 4px solid #372976; border-top: 1px solid #dedad4; border-right: 1px solid #dedad4; border-bottom: 1px solid #dedad4;">
+      <div class="label" style="color:#1a1a1a;">Accent border</div>
+      <div class="hex" style="color:#888;">#372976</div>
+      <div class="usage" style="color:#888;">Left-border accent on cards &amp; panels</div>
+    </div>
+  </div>
+</div>
+
+<!-- Selected / Highlighted State -->
+<div class="section">
+  <div class="section-title">Selected / Highlighted State</div>
+  <div class="row">
+    <div class="swatch" style="background:#27ae60;">
+      <div class="label" style="color:#fff;">Selected item</div>
+      <div class="hex" style="color:#d4f4e1;">#27ae60</div>
+      <div class="usage" style="color:#d4f4e1;">Active / selected row highlight</div>
+    </div>
+    <div class="swatch" style="background:#2ecc71;">
+      <div class="label" style="color:#fff;">Selected item hover</div>
+      <div class="hex" style="color:#d4f4e1;">#2ecc71</div>
+      <div class="usage" style="color:#d4f4e1;">Hover state on selected item</div>
+    </div>
+    <div class="swatch" style="background:#f5f4f0; border: 2px solid #27ae60; border-radius: 8px;">
+      <div class="label" style="color:#27ae60;">Selected outline variant</div>
+      <div class="hex" style="color:#888;">#27ae60 border</div>
+      <div class="usage" style="color:#888;">Outline style for selected state</div>
+    </div>
+  </div>
+</div>
+
+<!-- Sign-in / Sign-out -->
+<div class="section">
+  <div class="section-title">Sign-in / Sign-out Actions</div>
+  <div class="row">
+    <div class="swatch" style="background:#27ae60;">
+      <div class="label" style="color:#fff;">Sign-in / Confirm / Success</div>
+      <div class="hex" style="color:#d4f4e1;">#27ae60</div>
+      <div class="usage" style="color:#d4f4e1;">Positive actions and success states</div>
+    </div>
+    <div class="swatch" style="background:#2ecc71;">
+      <div class="label" style="color:#fff;">Sign-in hover</div>
+      <div class="hex" style="color:#d4f4e1;">#2ecc71</div>
+      <div class="usage" style="color:#d4f4e1;">Hover state</div>
+    </div>
+    <div class="swatch" style="background:#c0392b;">
+      <div class="label" style="color:#fff;">Sign-out / Delete / Error</div>
+      <div class="hex" style="color:#f9c8c3;">#c0392b</div>
+      <div class="usage" style="color:#f9c8c3;">Destructive actions and error states</div>
+    </div>
+    <div class="swatch" style="background:#e74c3c;">
+      <div class="label" style="color:#fff;">Sign-out hover</div>
+      <div class="hex" style="color:#f9c8c3;">#e74c3c</div>
+      <div class="usage" style="color:#f9c8c3;">Hover state</div>
+    </div>
+  </div>
+</div>
+
+<!-- Secondary / Orange -->
+<div class="section">
+  <div class="section-title">Secondary — Orange</div>
+  <div class="row">
+    <div class="swatch" style="background:#c98330;">
+      <div class="label" style="color:#fff;">Secondary button / Admin</div>
+      <div class="hex" style="color:#fde8c8;">#c98330</div>
+      <div class="usage" style="color:#fde8c8;">Default state</div>
+    </div>
+    <div class="swatch" style="background:#c38c4a;">
+      <div class="label" style="color:#fff;">Secondary button hover</div>
+      <div class="hex" style="color:#fde8c8;">#c38c4a</div>
+      <div class="usage" style="color:#fde8c8;">Hover state</div>
+    </div>
+    <div class="swatch" style="background:#f5f4f0; border: 1px solid #dedad4;">
+      <div class="label" style="color:#c98330;">Links</div>
+      <div class="hex" style="color:#888;">#c98330 → #c38c4a</div>
+      <div class="usage" style="color:#888;">Default → hover</div>
+    </div>
+  </div>
+</div>
+
+<!-- Text -->
+<div class="section">
+  <div class="section-title">Text</div>
+  <div class="row">
+    <div class="swatch" style="background:#f5f4f0; border: 1px solid #dedad4;">
+      <div class="label" style="color:#1a1a1a;">Primary text</div>
+      <div class="hex" style="color:#888;">#1a1a1a</div>
+      <div class="usage" style="color:#888;">Body copy, labels, form values</div>
+    </div>
+    <div class="swatch" style="background:#f5f4f0; border: 1px solid #dedad4;">
+      <div class="label" style="color:#666;">Muted / hint text</div>
+      <div class="hex" style="color:#888;">#666666</div>
+      <div class="usage" style="color:#888;">Placeholders, timestamps, captions</div>
+    </div>
+    <div class="swatch" style="background:#372976;">
+      <div class="label" style="color:#ffffff;">Text on purple</div>
+      <div class="hex" style="color:#b0a8d8;">#ffffff</div>
+      <div class="usage" style="color:#b0a8d8;">Buttons, badges on dark backgrounds</div>
+    </div>
+  </div>
+</div>
+
+<!-- Entry Fields -->
+<div class="section">
+  <div class="section-title">Entry Fields</div>
+  <div class="row">
+    <div class="entry-preview">
+      <span style="color:#1a1a1a;">Jessica Allen</span>
+      <div style="font-size:11px; color:#888; margin-top:6px; font-family:'Courier New',monospace;">bg #ffffff — border #372976 (2.5px)</div>
+    </div>
+    <div class="entry-preview">
+      <span class="placeholder">Enter a name…</span>
+      <div style="font-size:11px; color:#888; margin-top:6px; font-family:'Courier New',monospace;">placeholder text — #999999</div>
+    </div>
+  </div>
+</div>
+
+<!-- Status Popups -->
+<div class="section">
+  <div class="section-title">Status Popups</div>
+  <div class="row">
+    <div class="popup">
+      <div class="popup-bar" style="background:#c0392b;"><span>ERROR</span></div>
+      <div class="popup-body">
+        <div class="label">Error popup</div>
+        <div class="hex">white bg — red accent #c0392b</div>
+      </div>
+    </div>
+    <div class="popup">
+      <div class="popup-bar" style="background:#27ae60;"><span>SUCCESS</span></div>
+      <div class="popup-body">
+        <div class="label">Success popup</div>
+        <div class="hex">white bg — green accent #27ae60</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Notice Cards -->
+<div class="section">
+  <div class="section-title">Notice Cards</div>
+  <div class="row">
+    <div class="notice-card">
+      <div class="nc-title">Important — Term 2 schedule change</div>
+      <div class="nc-body">Please note that ASA will finish 30 minutes early on Friday 14 June due to a school event. Pick-up will be at 4:00pm instead of the usual time.</div>
+      <div class="nc-date">2026-04-18 09:30</div>
+    </div>
+    <div style="flex:1; min-width:180px; display:flex; flex-direction:column; gap:8px; justify-content:center; background:#f5f4f0; border:1px solid #dedad4; border-radius:10px; padding:18px 20px;">
+      <div style="font-size:13px; font-weight:600; color:#1a1a1a;">Card anatomy</div>
+      <div style="font-size:12px; color:#666; line-height:1.7;">
+        bg: #ffffff<br>
+        border: 0.5px solid #d5d2ca<br>
+        left accent: 4px solid #372976<br>
+        title: #372976<br>
+        body: #1a1a1a<br>
+        timestamp: #888888
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  ASA Sign-in System — Colour Reference &nbsp;·&nbsp; Generated for development use
+</footer>
+
+</body>
+</html>
